@@ -1,5 +1,5 @@
 # Hourglass
-HTML5 Hourglass</br>
+**Hourglass App**</br>
 <br/>
 A 3D Hourglass to remind you to take breaks every hour.<br/>
 Can run as a NW.js app (best), as chrome App (no transparency)<br/>
@@ -10,7 +10,7 @@ Uses Three.js, dat.gui.js and chrome APIs (when it find its, otherwise some feat
 Uses NSIS install system for packaging the binaries.
 <br/>
 <br/>
-Installer downloads:<br/>
+**Installer downloads:**<br/>
 https://github.com/pemn/Hourglass/releases/download/v1.0/Hourglass-x64-setup.exe
 <br/>
 <br/>
