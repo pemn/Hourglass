@@ -13,7 +13,7 @@ Can be used a web page on modern browsers (no transparency, with browser frame a
 <br/>
 Uses Three.js, dat.gui.js and chrome APIs (when it find its, otherwise some features will be unavailable)<br/>
 <br/>
-Uses NSIS install system for packaging the binaries.
+Uses NSIS install system for packaging the app with a NW.js runtime.
 #License
 Apache 2.0
 #Downloads
