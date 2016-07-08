@@ -1,5 +1,4 @@
 # Hourglass
-**Hourglass App**</br>
 <br/>
 A 3D Hourglass to remind you to take breaks every hour.<br/>
 Can run as a NW.js app (best), as chrome App (no transparency)<br/>
