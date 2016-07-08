@@ -2,10 +2,12 @@
 <br/>
 A 3D animated hourglass to remind you to take breaks every hour.<br/>
 As simple as a real hourglass but free, unbreakable and precise.<br/>
-Resizable, moveable and with transparent background (if supported by your desktop)<br/>
+Resizable, moveable and with transparent background (if supported by your desktop).<br/>
 <br/>
-Can run as a NW.js app (best), as chrome App (no transparency)<br/>
-or as a web page on modern browsers (no transparency, with browser frame and decorations).<br/>
+Since its a HTML5 application, can be packaged to run pretty much everywhere.<br/>
+The binary installer uses NW.js as the HTML5 runtime.<br/>
+Can be run as a chrome App (no transparency), sideloaded using a launch script (chromeapp.bat).<br/>
+Can be used a web page on modern browsers (no transparency, with browser frame and decorations).<br/>
 <br/>
 Uses Three.js, dat.gui.js and chrome APIs (when it find its, otherwise some features will be unavailable)<br/>
 <br/>
