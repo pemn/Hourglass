@@ -1,6 +1,7 @@
 # Hourglass
 <br/>
-A 3D animated hourglass to remind you to take breaks every hour. When time is up it will play a sound and become "always on top" until turned over.<br/>
+A 3D animated hourglass to remind you to take breaks every hour.<br/>
+When time is up it will play a sound and become "always on top" until turned over.<br/>
 As simple as a real hourglass but free, unbreakable and precise.<br/>
 Resizable, moveable and with transparent background (if supported by your desktop).<br/>
 <br/>
