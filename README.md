@@ -14,12 +14,9 @@ Can be used a web page on modern browsers (no transparency, with browser frame a
 Uses Three.js, dat.gui.js and chrome APIs (when it find its, otherwise some features will be unavailable)<br/>
 <br/>
 Uses NSIS install system for packaging the binaries.
-<br/>
-<br/>
+#License
+Apache 2.0
 #Downloads
 https://github.com/pemn/Hourglass/releases/download/v1.0/Hourglass-x64-setup.exe
-<br/>
-<br/>
 #Screenshot
-<br/>
 ![screenshot](https://github.com/pemn/Hourglass/blob/master/img/screenshot.png)
