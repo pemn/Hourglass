@@ -1,0 +1,14 @@
+// nwjs package descriptor
+{
+  "name": "Hourglass",
+  "main": "index.html",
+  "window": {
+    "fullscreen": false,
+    "frame": false,
+    "transparent": true,
+    "always_on_top": false,
+    "toolbar": false,
+    "width": 180,
+    "height": 360
+  }
+}
