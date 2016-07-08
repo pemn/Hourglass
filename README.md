@@ -2,6 +2,7 @@
 <br/>
 A 3D animated hourglass to remind you to take breaks every hour.<br/>
 As simple as a real hourglass but free, unbreakable and precise.<br/>
+Resizable, moveable and with transparent background (if supported by your desktop)<br/>
 <br/>
 Can run as a NW.js app (best), as chrome App (no transparency)<br/>
 or as a web page on modern browsers (no transparency, with browser frame and decorations).<br/>
