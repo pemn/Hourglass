@@ -16,10 +16,10 @@ Uses Three.js, dat.gui.js and chrome APIs (when it find its, otherwise some feat
 Uses NSIS install system for packaging the binaries.
 <br/>
 <br/>
-**Installer downloads:**<br/>
+#Downloads
 https://github.com/pemn/Hourglass/releases/download/v1.0/Hourglass-x64-setup.exe
 <br/>
 <br/>
-Screenshot:</br>
+#Screenshot
 <br/>
 ![screenshot](https://github.com/pemn/Hourglass/blob/master/img/screenshot.png)
