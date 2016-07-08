@@ -10,7 +10,7 @@ SetCompressor /SOLID /FINAL LZMA
 ;--------------------------------
 Name "${APPNAME}"
 InstallDir "$APPDATA\nwjs"
-Icon "..\${APPNAME}\assets\favicon.ico"
+Icon "..\assets\favicon.ico"
 OutFile "${APPNAME}-${APPARCH}-setup.exe"
 RequestExecutionLevel user
 ;--------------------------------
@@ -36,9 +36,9 @@ SectionEnd
 ; HTML5 App
 Section "!Hourglass HTML5 App"
     SetOutPath "$INSTDIR\${APPNAME}"
-    File "..\${APPNAME}\*.*"
-    File /r "..\${APPNAME}\assets"
-    File /r "..\${APPNAME}\js"
+    File "..\*.*"
+    File /r "..\assets"
+    File /r "..\js"
 SectionEnd
 ; HTML5 Engine
 Section "!NW.js HTML5 Engine"
