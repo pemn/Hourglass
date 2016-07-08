@@ -1,3 +1,4 @@
+; NSIS config file
 ; NWJS App setup
 
 !define APPNAME Hourglass
