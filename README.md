@@ -7,4 +7,4 @@ or as a web page on modern browsers (no transparency, with browser frame and dec
 <br/>
 Uses Three.js, dat.gui.js and chrome APIs (when it find its, otherwise some features will be unavailable)<br/>
 <br/>
-<img href="screenshot.png">screenshot</img>
+![alt tag](Hourglass/img/screenshot.png)
