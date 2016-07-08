@@ -12,7 +12,6 @@ Uses NSIS install system for packaging the binaries.
 <br/>
 Installer downloads:<br/>
 [https://github.com/pemn/Hourglass/releases/download/v1.0/Hourglass-x64-setup.exe](Hourglass-x64-setup.exe)
-
 <br/>
 <br/>
 Screenshot:</br>
