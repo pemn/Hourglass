@@ -17,13 +17,13 @@ If you want to rebuild the installer, the NW.js binaries are required. Copy to "
 ###License
 Apache 2.0
 ###Downloads
-- Windows 64 bits :octocat:  
+- Windows 64 bits @ :octocat:  
 https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.exe
 
-- Windows 32 bits :octocat:  
+- Windows 32 bits @ :octocat:  
 https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x86-setup.exe
 
-- Linux 64 bits :octocat:  
+- Linux 64 bits @ :octocat:  
 https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-linux.zip
 
 ###Screenshot
