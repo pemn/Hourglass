@@ -23,5 +23,8 @@ https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.e
 - Windows 32 bits :octocat:  
 https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x86-setup.exe
 
+- Linux 64 bits :octocat:  
+https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-linux.zip
+
 ###Screenshot
 ![screenshot](https://github.com/pemn/Hourglass/blob/master/assets/screenshot.png)
