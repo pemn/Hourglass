@@ -1,4 +1,4 @@
-# Hourglass
+#Hourglass :hourglass:
 A 3D animated hourglass to remind you to take breaks every hour.  
 When time is up it will play a sound and become "always on top" until turned over.  
 As simple as a physical hourglass but free, unbreakable and precise.  
