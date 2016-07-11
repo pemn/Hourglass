@@ -1,5 +1,6 @@
 Extract the 64 bits NW.js binary directory direclty here.  
 Files which should be here:  
+```
 credits.html  
 d3dcompiler_47.dll  
 ffmpeg.dll  
@@ -19,3 +20,4 @@ nw_material_200_percent.pak
 resources.pak  
 snapshot_blob.bin  
 locales\en-US.pak  
+```
