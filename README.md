@@ -17,9 +17,9 @@ If you want to rebuild the installer, the NW.js binaries are required. Copy then
 #License
 Apache 2.0
 #Downloads :octocat:
-###64 bits
+###Windows 64 bits
 https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.exe  
-###32 bits
+###Windows 32 bits
 https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x86-setup.exe  
 #Screenshot
 ![screenshot](https://github.com/pemn/Hourglass/blob/master/img/screenshot.png)
