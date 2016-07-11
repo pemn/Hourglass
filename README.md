@@ -1,6 +1,6 @@
-#Hourglass :hourglass:
+##Hourglass :hourglass:
 A 3D animated hourglass to remind you to take healthy breaks (5-10 minutes) every hour.  
-When time is up it will play a sound and become "always on top" until turned over.  
+When time is up it will play a sound and become "always on top" until turned.  
 As simple as a physical hourglass but free, unbreakable and precise.  
 Resizable, moveable and with transparent background (if supported by your desktop).  
   
@@ -10,18 +10,18 @@ Can be run as a chrome App (no transparency), sideloaded using a launch script (
   
 Can be used a web page on modern browsers (no transparency, with browser frame and decorations). For web page mode, just copy the folder into a web server. Running from local file system wont work.  
   
-Uses Three.js, dat.gui.js and chrome APIs (when it find its, otherwise some features will be unavailable).  
-#Installer
+Uses Three.js, dat.gui.js and chrome APIs (when it finds it, otherwise some features will be unavailable).  
+###Installer
 I also made a NSIS config file for creating a complete Windows installer/uninstaller.  
-If you want to rebuild the installer, the NW.js binaries are required. Copy then to "installer/(architectury)" folder and run batch.
-#License
+If you want to rebuild the installer, the NW.js binaries are required. Copy to "installer/(architectury)" folder.
+###License
 Apache 2.0
-#Downloads
+###Downloads
 - Windows 64 bits :octocat:  
 https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.exe
 
 - Windows 32 bits :octocat:  
 https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x86-setup.exe
 
-#Screenshot
+###Screenshot
 ![screenshot](https://github.com/pemn/Hourglass/blob/master/img/screenshot.png)
