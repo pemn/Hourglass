@@ -24,4 +24,4 @@ https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.e
 https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x86-setup.exe
 
 ###Screenshot
-![screenshot](https://github.com/pemn/Hourglass/blob/master/img/screenshot.png)
+![screenshot](https://github.com/pemn/Hourglass/blob/master/assets/screenshot.png)
