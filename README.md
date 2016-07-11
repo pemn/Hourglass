@@ -6,7 +6,7 @@ Resizable, moveable and with transparent background (if supported by your deskto
   
 Since its a HTML5 application, can be packaged to run pretty much everywhere.  
 The binary installer uses the NW.js HTML5 engine.  
-Can be run as a chrome App (no transparency), sideloaded using a launch script (chromeapp.bat).  
+Can be run as a chrome App (no transparency), sideloaded using a launch script (chrome-lauch-app.bat).  
   
 Can be used a web page on modern browsers (no transparency, with browser frame and decorations). For web page mode, just copy the folder into a web server. Running from local file system wont work.  
   
