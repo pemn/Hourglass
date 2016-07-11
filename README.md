@@ -19,8 +19,8 @@ If you want to rebuild the installer, the NW.js binaries are required. Copy then
 Apache 2.0
 #Downloads
 64 bits:<br/>
-https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.exe
+https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.exe<br/>
 32 bits:<br/>
-https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x86-setup.exe
+https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x86-setup.exe<br/>
 #Screenshot
 ![screenshot](https://github.com/pemn/Hourglass/blob/master/img/screenshot.png)
