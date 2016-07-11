@@ -25,6 +25,7 @@ var Globals = {
     asset_wood_texture: 'assets/wood_texture.png',
     hide_close: false,
     always_on_top: false,
+    no_sound: false,
     rate: 1.0
 };
 
@@ -34,6 +35,7 @@ Globals.loadStorage = function () {
     if (window.localStorage !== null) {
         this.hide_close = window.localStorage.getItem("hide_close") == "true";
         this.always_on_top = window.localStorage.getItem("always_on_top") == "true";
+        this.no_sound = window.localStorage.getItem("no_sound") == "true";
     }
 }
 
@@ -235,7 +237,9 @@ Hourglass.prototype.clockUpdate = function() {
                 win.setAlwaysOnTop(true);
             }
             // play a hardcoded sound file
-            Globals.audio_beep.play();
+            if(! Globals.no_sound) {
+                Globals.audio_beep.play();
+            }
         } else {
             this.fill = Math.min(1.0, 1.0 - this.clock.getElapsedTime() / Globals.wait);
         }

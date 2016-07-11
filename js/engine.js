@@ -41,7 +41,7 @@ function showHelp() {
 }
 
 function onDocumentKey( event ) {
-    console.log("onDocumentKey " + event.keyCode);
+    // console.log("onDocumentKey " + event.keyCode);
     if(event.keyCode == 0x20) {
         // if running on nwjs, minimize. Otherwise do nothing
         if(chrome && chrome.app && chrome.app.window) chrome.app.window.current().minimize();
@@ -214,7 +214,10 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("close_buttom").style.visibility = value ? "hidden" : "visible";
             if (window.localStorage !== null) window.localStorage.setItem("hide_close", value);
         });
-
+        // disable sound
+        gui.add(Globals, 'no_sound').onChange(function(value) {
+            if (window.localStorage !== null) window.localStorage.setItem("no_sound", value);
+        });
         // Close buttom (since we are a frameless window)
         var div = document.createElement( 'div' );
         div.className = "custom-buttom";
