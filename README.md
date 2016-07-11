@@ -13,7 +13,7 @@ Can be used a web page on modern browsers (no transparency, with browser frame a
 <br/>
 Uses Three.js, dat.gui.js and chrome APIs (when it find its, otherwise some features will be unavailable)<br/>
 #Installer
-I also made a NSIS config file for creating a Windows installer.<br/>
+I also made a NSIS config file for creating a complete Windows installer/uninstaller.<br/>
 If you want to rebuild the installer, the NW.js binaries are required. Copy then to "installer/(architectury)" folder and run batch.
 #License
 Apache 2.0
