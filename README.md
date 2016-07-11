@@ -12,8 +12,9 @@ Can be run as a chrome App (no transparency), sideloaded using a launch script (
 Can be used a web page on modern browsers (no transparency, with browser frame and decorations). For web page mode, just copy the folder into a web server. Running from local file system wont work.<br/>
 <br/>
 Uses Three.js, dat.gui.js and chrome APIs (when it find its, otherwise some features will be unavailable)<br/>
-<br/>
-I also made a NSIS config file for creating a Windows installer. To rebuild the installer the NW.js binaries are required. The files are too big for github.
+#Installer
+I also made a NSIS config file for creating a Windows installer.<br/>
+If you want to rebuild the installer, the NW.js binaries are required. Copy then to "installer/(architectury)" folder and run batch.
 #License
 Apache 2.0
 #Downloads
