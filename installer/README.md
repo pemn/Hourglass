@@ -3,3 +3,6 @@ http://nwjs.io/downloads/
 
 Extract to the directory corresponding to the architecture you want to build.  
 Default is x64. It can be changed either as a flag in the command line or directly in the the nsi file.  
+
+And of course you need NSIS (Nullsoft Scriptable Install System):
+http://nsis.sourceforge.net/Download
