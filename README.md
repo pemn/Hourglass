@@ -1,5 +1,5 @@
 ##Hourglass :hourglass:
-A 3D animated hourglass to remind you to take healthy breaks (5-10 minutes) every hour. Those small pauses greatly help against lesions due to repetitive work.  
+A 3D animated hourglass to remind you to take healthy breaks (5-10 minutes) every hour. Those small pauses greatly help against work (or gaming) related lesions.  
 When time is up it will play a sound (can be disabled) and become "always on top" of other windows until turned.  
 Simple like a physical hourglass but free, unbreakable and precise.  
 Resizable, moveable and with transparent background (if supported by your desktop).  
