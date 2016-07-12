@@ -16,15 +16,15 @@ I also made a NSIS config file for creating a complete Windows installer/uninsta
 If you want to rebuild the installer, the NW.js binaries are required. Copy to "installer/(architectury)" folder.
 ###License
 Apache 2.0
-###Downloads @ :octocat:  
-- Windows 64 bits
-https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.exe
+###Downloads  
+- Windows 64 bits  
+:octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.exe
 
-- Windows 32 bits
-https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x86-setup.exe
+- Windows 32 bits  
+:octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x86-setup.exe
 
-- Linux 64 bits 
-https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-linux.zip
+- Linux 64 bits  
+:octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-linux.zip
 
 ###Screenshot
 ![screenshot](https://github.com/pemn/Hourglass/blob/master/assets/screenshot.png)
