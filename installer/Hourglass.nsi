@@ -60,7 +60,7 @@ Section "Enable Transparency in Windows"
 SectionEnd
 
 Section "un.Hourglass HTML5 App"
-    ; Remove engine
+    ; Remove app
     RMDir /r "$INSTDIR\${APPNAME}"
 SectionEnd
 Section "un.NW.js HTML5 Engine"
