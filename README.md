@@ -11,12 +11,8 @@ Can be run as a chrome App (no transparency), sideloaded using a launch script (
 Can be used a web page on modern browsers (no transparency, with browser frame and decorations). For web page mode, just copy the folder into a web server. Running index.html from local file system wont work.  
   
 Uses Three.js, dat.gui.js and chrome APIs (when it finds it, otherwise some features will be unavailable).
-##Installer
-The project includes a NSIS config file for creating a standard Windows installer/uninstaller.  
-The Windows installer does not require administrator privileges.  
-If you want to rebuild the installer, the NW.js binaries are required. Copy to "installer/(architecture)" folder.
-##License
-Apache 2.0
+##Screenshot
+![screenshot](https://github.com/pemn/Hourglass/blob/master/assets/screenshot.png)
 ##Downloads
 - Windows 64 bits  
 :octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.exe
@@ -27,5 +23,9 @@ Apache 2.0
 - Linux 64 bits  
 :octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-linux.zip
 
-##Screenshot
-![screenshot](https://github.com/pemn/Hourglass/blob/master/assets/screenshot.png)
+##Installer
+The project includes a NSIS config file for creating a standard Windows installer/uninstaller.  
+The Windows installer does not require administrator privileges.  
+If you want to rebuild the installer, the NW.js binaries are required. Copy to "installer/(architecture)" folder.
+##License
+Apache 2.0
