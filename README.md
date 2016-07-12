@@ -1,5 +1,5 @@
-##Hourglass :hourglass:
-A 3D animated hourglass to remind you to take healthy breaks from work/gaming (5-10 minutes) every hour. Those small pauses greatly help against work/gaming related lesions.  
+#Hourglass :hourglass:
+A 3D animated hourglass to remind you to rest from work/gaming every hour. Those small pauses (5-10 minutes) greatly help against RSS (Repetitive strain injuries).  
 When time is up it will play a sound (can be disabled) and become "always on top" of other windows until turned.  
 Simple like a physical hourglass but free, unbreakable and precise.  
 Resizable, moveable and with transparent background (if supported by your desktop).  
@@ -10,13 +10,14 @@ Can be run as a chrome App (no transparency), sideloaded using a launch script (
   
 Can be used a web page on modern browsers (no transparency, with browser frame and decorations). For web page mode, just copy the folder into a web server. Running index.html from local file system wont work.  
   
-Uses Three.js, dat.gui.js and chrome APIs (when it finds it, otherwise some features will be unavailable).  
-###Installer
-I also made a NSIS config file for creating a complete Windows installer/uninstaller.  
+Uses Three.js, dat.gui.js and chrome APIs (when it finds it, otherwise some features will be unavailable).
+##Installer
+The project includes a NSIS config file for creating a standard Windows installer/uninstaller.  
+The Windows installer does not require administrator privileges.  
 If you want to rebuild the installer, the NW.js binaries are required. Copy to "installer/(architecture)" folder.
-###License
+##License
 Apache 2.0
-###Downloads  
+##Downloads  
 - Windows 64 bits  
 :octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.exe
 
@@ -25,6 +26,5 @@ Apache 2.0
 
 - Linux 64 bits  
 :octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-linux.zip
-
-###Screenshot
+##Screenshot
 ![screenshot](https://github.com/pemn/Hourglass/blob/master/assets/screenshot.png)
