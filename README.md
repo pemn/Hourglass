@@ -8,12 +8,12 @@ Since its a HTML5 application, can be packaged to run pretty much everywhere.
 The binary installer uses the NW.js HTML5 engine.  
 Can be run as a chrome App (no transparency), sideloaded using a launch script (chrome-lauch-app.bat).  
   
-Can be used a web page on modern browsers (no transparency, with browser frame and decorations). For web page mode, just copy the folder into a web server. Running from local file system wont work.  
+Can be used a web page on modern browsers (no transparency, with browser frame and decorations). For web page mode, just copy the folder into a web server. Running index.html from local file system wont work.  
   
 Uses Three.js, dat.gui.js and chrome APIs (when it finds it, otherwise some features will be unavailable).  
 ###Installer
 I also made a NSIS config file for creating a complete Windows installer/uninstaller.  
-If you want to rebuild the installer, the NW.js binaries are required. Copy to "installer/(architectury)" folder.
+If you want to rebuild the installer, the NW.js binaries are required. Copy to "installer/(architecture)" folder.
 ###License
 Apache 2.0
 ###Downloads  
