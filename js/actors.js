@@ -20,7 +20,7 @@ var Globals = {
     color_wood: 0xE37222,
     color_glass: 0x3d7edb,
     color_sand: 0xecb11f,
-    asset_beep: 'assets/beep.ogg',
+    asset_beep: 'assets/Clinking_Teaspoon.ogg',
     asset_glass_texture: 'assets/glass_texture.png',
     asset_wood_texture: 'assets/wood_texture.png',
     hide_close: false,
