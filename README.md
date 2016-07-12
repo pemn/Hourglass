@@ -1,5 +1,5 @@
 #Hourglass :hourglass:
-A 3D animated hourglass to remind you to rest from work/gaming every hour. Those small pauses (5-10 minutes) greatly help against RSS (Repetitive strain injuries).  
+A 3D animated hourglass to remind you to rest from work/gaming every hour. Those small pauses (5-10 minutes) greatly help against RSIs (Repetitive strain injuries).  
 When time is up it will play a sound (can be disabled) and become "always on top" of other windows until turned.  
 Simple like a physical hourglass but free, unbreakable and precise.  
 Resizable, moveable and with transparent background (if supported by your desktop).  
