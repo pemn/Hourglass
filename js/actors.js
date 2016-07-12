@@ -64,12 +64,7 @@ var FallingSand = function(scene, distance) {
 }
 
 FallingSand.prototype.update = function(fill) {
-    if(fill == 0) {
-        this.actor.visible = false;
-        return;
-    }
-    
-    this.actor.visible = true;
+    if(fill == 0) return;
     
     for (var i = 0; i < this.count; i++) {
         this.draw[i][1] += this.speed;
@@ -217,7 +212,9 @@ Hourglass.prototype.update = function() {
         }
         // snap the rotation to zero to prevent subtle inconsistencies
         if(this.play <= 0) {
+            this.particles.actor.visible = true;
             this.sand.rotation.z = 0;
+            this.glass.rotation.z = 0;
         }
     } else if(this.clock.running) {
         this.particles.update(this.fill);

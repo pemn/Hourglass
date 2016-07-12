@@ -34,7 +34,7 @@ function showHelp() {
     message_help.innerHTML += "Right Click : Menu<br/>";
     message_help.innerHTML += "<br/>";
     message_help.innerHTML += "Bugs/Sugestions:<br/>";
-    message_help.innerHTML += "paulo.ernesto<br/>";
+    message_help.innerHTML += "github.com/pemn<br/>";
     
     document.body.appendChild( message_help );
     setTimeout(function(){document.body.removeChild(message_help)}, 5000);
