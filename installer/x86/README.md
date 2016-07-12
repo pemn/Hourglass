@@ -1,4 +1,4 @@
-Extract the 64 bits NW.js binary directory direclty here.  
+Extract the 64 bits NW.js binary directory directly here.  
 Files which should be here: 
 ```
 credits.html  
