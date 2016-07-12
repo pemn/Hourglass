@@ -17,7 +17,7 @@ The Windows installer does not require administrator privileges.
 If you want to rebuild the installer, the NW.js binaries are required. Copy to "installer/(architecture)" folder.
 ##License
 Apache 2.0
-##Downloads  
+##Downloads
 - Windows 64 bits  
 :octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.exe
 
@@ -26,5 +26,6 @@ Apache 2.0
 
 - Linux 64 bits  
 :octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-linux.zip
+
 ##Screenshot
 ![screenshot](https://github.com/pemn/Hourglass/blob/master/assets/screenshot.png)
