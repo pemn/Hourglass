@@ -1,7 +1,7 @@
 #Hourglass :hourglass:
-A 3D animated hourglass to remind you to rest from work/gaming every hour. Those small pauses (5-10 minutes) greatly help against RSIs (Repetitive strain injuries).  
+This minimalist app emulates a classic sandglass using a 3D model rendered with WebGL. The goal is to be simple like a physical hourglass but free, unbreakable and precise.  
+The main purpose of this app is to remind the user to rest its arms and eyes every hour. Those small pauses (5-10 minutes) greatly help against RSIs (Repetitive strain injuries).  
 When time is up it will play a sound (can be disabled) and become "always on top" of other windows until turned.  
-Simple like a physical hourglass but free, unbreakable and precise.  
 Resizable, moveable and with transparent background (if supported by your desktop).  
   
 Since its a HTML5 application, can be packaged to run pretty much everywhere.  
