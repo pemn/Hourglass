@@ -13,6 +13,10 @@ Can be used a web page on modern browsers (no transparency, with browser frame a
 Uses Three.js, dat.gui.js and chrome APIs (when it finds it, otherwise some features will be unavailable).
 ##Screenshot
 ![screenshot](https://github.com/pemn/Hourglass/blob/master/assets/screenshot.png)
+##Installer
+The project includes a NSIS config file for creating a standard Windows installer/uninstaller.  
+The Windows installer does not require administrator privileges.  
+If you want to rebuild the installer, the NW.js binaries are required. Copy to "installer/(architecture)" folder.
 ##Downloads
 - Windows 64 bits  
 :octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.exe
@@ -23,9 +27,5 @@ Uses Three.js, dat.gui.js and chrome APIs (when it finds it, otherwise some feat
 - Linux 64 bits  
 :octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-linux.zip
 
-##Installer
-The project includes a NSIS config file for creating a standard Windows installer/uninstaller.  
-The Windows installer does not require administrator privileges.  
-If you want to rebuild the installer, the NW.js binaries are required. Copy to "installer/(architecture)" folder.
 ##License
 Apache 2.0
