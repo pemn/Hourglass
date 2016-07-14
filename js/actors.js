@@ -25,13 +25,17 @@ var Globals = {
     asset_beep: 'assets/Clinking_Teaspoon.ogg',
     asset_glass_texture: 'assets/glass_texture.png',
     asset_wood_texture: 'assets/wood_texture.png',
+    no_sound: false,
     hide_close: false,
     always_on_top: false,
-    no_sound: false,
     rate: 1.0
 };
 
+// cached alert sound
 Globals.audio_beep = new Audio(Globals.asset_beep);
+
+// flag indicating if chrome APIs are available
+Globals.chrome = chrome && chrome.app && chrome.app.window && true;
 
 // load a global value from the persistent storate
 Globals.loadItem = function(item) {
@@ -235,8 +239,8 @@ Hourglass.prototype.clockUpdate = function() {
             this.clock.stop();
             this.fill = 0;
             this.sand_state();
-            if(typeof(nw) !== "undefined") {
-                var win = nw.Window.get();
+            if(Globals.chrome) {
+                var win = chrome.app.window.current();
                 win.restore();
                 win.setAlwaysOnTop(true);
             }

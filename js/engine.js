@@ -46,7 +46,7 @@ function onDocumentKey( event ) {
     // console.log("onDocumentKey " + event.keyCode);
     if(event.keyCode == 0x20) {
         // if running on nwjs, minimize. Otherwise do nothing
-        if(chrome && chrome.app && chrome.app.window) chrome.app.window.current().minimize();
+        if(Globals.chrome) chrome.app.window.current().minimize();
         // if(typeof(nw) !== "undefined") nw.Window.get().minimize();
     }  else if(event.keyCode == 0x1b) {
         // this usualy will only work on nwjs or as a chrome app
@@ -207,10 +207,10 @@ document.addEventListener('DOMContentLoaded', function() {
     gui.add(Globals, 'wait');
     gui.add(Globals, 'rate', 0.0, 1.0).onChange(function(value) {Engine.hourglass.setRate(value)});
     // nwjs or chrome.app only section
-    if(chrome && chrome.app && chrome.app.window) {
+    if(Globals.chrome) {
         // read settings stored on the presistent localStorage
         ["always_on_top","hide_close","no_sound"].map(Globals.loadItem);
-        
+
         // Close buttom (since we are a frameless window)
         var div = document.createElement( 'div' );
         div.className = "custom-buttom";
