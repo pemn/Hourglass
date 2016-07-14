@@ -197,7 +197,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // console.log("DOMContentLoaded");
     window.moveTo(window.screen.availWidth - window.outerWidth - 20, window.screen.availHeight * 0.1);
 
-    Globals.loadStorage();
     Engine.init();
     // GUI
     gui = new dat.GUI({ autoplace: false, width: "100%" });
@@ -209,20 +208,9 @@ document.addEventListener('DOMContentLoaded', function() {
     gui.add(Globals, 'rate', 0.0, 1.0).onChange(function(value) {Engine.hourglass.setRate(value)});
     // nwjs or chrome.app only section
     if(chrome && chrome.app && chrome.app.window) {
-        // always on top checkbox
-        gui.add(Globals, 'always_on_top').onChange(function(value) {
-            chrome.app.window.current().setAlwaysOnTop(value);
-            if (window.localStorage !== null) window.localStorage.setItem("always_on_top", value);
-        });
-        // hide close button checkbox
-        gui.add(Globals, 'hide_close').onChange(function(value) {
-            document.getElementById("close_buttom").style.visibility = value ? "hidden" : "visible";
-            if (window.localStorage !== null) window.localStorage.setItem("hide_close", value);
-        });
-        // disable sound
-        gui.add(Globals, 'no_sound').onChange(function(value) {
-            if (window.localStorage !== null) window.localStorage.setItem("no_sound", value);
-        });
+        // read settings stored on the presistent localStorage
+        ["always_on_top","hide_close","no_sound"].map(Globals.loadItem);
+        
         // Close buttom (since we are a frameless window)
         var div = document.createElement( 'div' );
         div.className = "custom-buttom";
@@ -232,11 +220,26 @@ document.addEventListener('DOMContentLoaded', function() {
         div.style.visibility = Globals.hide_close ? "hidden" : "visible";
         div.addEventListener('click', function() {window.close()}, false);
         document.body.appendChild( div );
+
+        // disable sound
+        gui.add(Globals, 'no_sound');
+
+        // always on top checkbox
+        gui.add(Globals, 'always_on_top').onChange(chrome.app.window.current().setAlwaysOnTop);
         // apply the stored always on top setting
-        if(Globals.always_on_top) {
-            chrome.app.window.current().setAlwaysOnTop(true);
-        }
+        if(Globals.always_on_top) chrome.app.window.current().setAlwaysOnTop(true);
+
+        // hide close button checkbox
+        gui.add(Globals, 'hide_close').onChange(function(value) {
+            document.getElementById("close_buttom").style.visibility = value ? "hidden" : "visible";
+        });
     }
     // briefly show the help panel
     showHelp();
+});
+
+window.addEventListener("beforeunload", function(){
+    // store settings on the persistent localStorage
+   ["always_on_top","hide_close","no_sound"].map(Globals.saveItem);
+   return(false);
 });

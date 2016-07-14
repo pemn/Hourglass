@@ -33,12 +33,17 @@ var Globals = {
 
 Globals.audio_beep = new Audio(Globals.asset_beep);
 
-Globals.loadStorage = function () {
-    if (window.localStorage !== null) {
-        this.hide_close = window.localStorage.getItem("hide_close") == "true";
-        this.always_on_top = window.localStorage.getItem("always_on_top") == "true";
-        this.no_sound = window.localStorage.getItem("no_sound") == "true";
-    }
+// load a global value from the persistent storate
+Globals.loadItem = function(item) {
+    if (window.localStorage === null) return;
+    // convert "true" and "false" to true/false boolean
+    Globals[item] = eval(window.localStorage.getItem(item));
+}
+
+// save a global value to the persistent storate
+Globals.saveItem = function(item) {
+    if (window.localStorage === null) return;
+    window.localStorage.setItem(item, Globals[item]);
 }
 
 // simple particle effect for falling sand
