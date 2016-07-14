@@ -80,18 +80,20 @@ function onDocumentMouseUp(event) {
     window.removeEventListener('mouseup', onDocumentMouseUp);
 }
 
-function onRendererMouseDown( event ) {
-    if(event.button == 2) {
-        dat.GUI.toggleHide();
-        if(gui.closed) {
-            gui.open()
-        } else {
-            gui.close()
-        }
+function onDocumentMouseDown( event ) {
+    if(event.button != 2) return;
+    event.preventDefault();
+    dat.GUI.toggleHide();
+    if(gui.closed) {
+        gui.open()
+    } else {
+        gui.close()
     }
+}
+
+function onRendererMouseDown( event ) {
     if(event.button != 0) return;
     event.preventDefault();
-
 
     if ( Engine.hourglass.intersect(Engine.camera, event.clientX / window.innerWidth, event.clientY / window.innerHeight)) {
         Engine.hourglass.turn();
@@ -162,6 +164,7 @@ Engine.init = function() {
     // mouse move and clicks
     this.renderer.domElement.addEventListener('mousemove', onRendererMouseMove, false);
     this.renderer.domElement.addEventListener('mousedown', onRendererMouseDown, false);
+    document.addEventListener('mousedown', onDocumentMouseDown, false);
     // capture all keystrokes
     document.addEventListener('keydown', onDocumentKey, false);
     // prevent context menu from showing up in chrome app
