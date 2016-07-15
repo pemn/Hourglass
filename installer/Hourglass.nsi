@@ -26,28 +26,34 @@ UninstPage instfiles
 
 ; Hidden sections creating the uninstaller
 Section
+    ; the working directory for the shortcuts must be the base dir
     SetOutPath "$INSTDIR"
     ; Create uninstall information
+    CreateDirectory "$INSTDIR\${APPNAME}"
+    WriteUninstaller "${APPNAME}\uninstaller.exe"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APPNAME}-${APPARCH}" "DisplayName" "${APPNAME}-${APPARCH}"
-    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APPNAME}-${APPARCH}" "UninstallString" '"$INSTDIR\uninstaller.exe"'
-    WriteUninstaller "uninstaller.exe"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APPNAME}-${APPARCH}" "UninstallString" '"$INSTDIR\${APPNAME}\uninstaller.exe"'
+    ; Create Shortcuts
+    CreateDirectory "$SMPROGRAMS\${APPNAME}"
+    CreateShortCut  "$SMPROGRAMS\${APPNAME}\${APPNAME}.lnk" "$INSTDIR\${APPARCH}\nw.exe" " --nwapp=${APPNAME}" "$INSTDIR\${APPNAME}\assets\favicon.ico"
+    CreateShortCut  "$DESKTOP\${APPNAME}.lnk" "$INSTDIR\${APPARCH}\nw.exe" " --nwapp=${APPNAME}" "$INSTDIR\${APPNAME}\assets\favicon.ico"
 SectionEnd
 ; HTML5 App
 ; The files must reside on the folder parent to this file
-Section "!Hourglass HTML5 App"
+Section "!Hourglass App"
+    SectionIn RO
     SetOutPath "$INSTDIR\${APPNAME}"
-    File "..\*.*"
+    ; Write app files
+    File    "..\*.*"
     File /r "..\assets"
     File /r "..\js"
 SectionEnd
 ; HTML5 Engine
 ; The unzipped engine files must reside on a subfolder (relative to this file) named: nwjs-(architecture)
-Section "!NW.js HTML5 Engine"
+Section "!NW.js Engine"
+    SectionIn RO
     SetOutPath "$INSTDIR\${APPARCH}"
     File /r "${APPARCH}\*.*"
-SectionEnd
-Section "Create Desktop Shortcut"
-    CreateShortCut "$DESKTOP\${APPNAME}.lnk" "$INSTDIR\${APPARCH}\nw.exe" " --nwapp=..\${APPNAME}" "$INSTDIR\${APPNAME}\assets\favicon.ico"
 SectionEnd
 Section "Auto start with Windows"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Run" "${APPNAME}-${APPARCH}" '"$INSTDIR\${APPARCH}\nw.exe" --nwapp="$INSTDIR\${APPNAME}"'
@@ -58,14 +64,20 @@ Section "Enable Transparency in Windows"
     ; Restart window manager so changes are applied right away
     Exec 'taskkill.exe /im dwm.exe'
 SectionEnd
-
-Section "un.Hourglass HTML5 App"
-    ; Remove app
-    RMDir /r "$INSTDIR\${APPNAME}"
+Section "Run after installation"
+    ExecShell "" "$DESKTOP\${APPNAME}.lnk"
 SectionEnd
-Section "un.NW.js HTML5 Engine"
+
+Section "un.Hourglass App"
+    ; Remove app
+    ; the uninstaller $INSTDIR is actualy the $INSTDIR\${APPNAME} from the installer
+    ; this enables us to have multiple apps sharing a single Engine
+    ; this is desirable because usualy most disk space is taken by the Engine
+    RMDir /r "$INSTDIR"
+SectionEnd
+Section "un.NW.js Engine"
     ; Remove engine
-    RMDir /r "$INSTDIR\${APPARCH}"
+    RMDir /r "$INSTDIR\..\${APPARCH}"
 SectionEnd
 Section "-un.Uninstall"
     ; Remove registry keys
@@ -73,8 +85,8 @@ Section "-un.Uninstall"
     DeleteRegValue HKCU "Software\Microsoft\Windows\CurrentVersion\Run" "${APPNAME}-${APPARCH}"
     ; Remove shortcuts
     Delete "$DESKTOP\${APPNAME}.lnk"
-    ; Remove uninstaller
-    Delete "$INSTDIR\uninstaller.exe"
+    Delete "$SMPROGRAMS\${APPNAME}\${APPNAME}.lnk"
+    RMDir  "$SMPROGRAMS\${APPNAME}"
     ; Remove base dir if empty
-    RMDir "$INSTDIR"
+    RMDir  "$INSTDIR\.."
 SectionEnd
