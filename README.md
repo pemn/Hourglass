@@ -19,6 +19,7 @@ Uses Three.js, dat.gui.js and chrome APIs (when it finds it, otherwise some feat
 The project includes the NSIS config file used to build the Windows installer/uninstaller.  
 The Windows installer does not require administrator privileges and allows multiple Apps to share the same HTML5 Engine.
 ##Downloads
+###v1.0
 - Windows 64 bits  
 :octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-setup.exe
 
