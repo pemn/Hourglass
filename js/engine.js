@@ -35,9 +35,9 @@ function showHelp() {
     message_help.innerHTML += "Tab/Click : Turn<br/>";
     message_help.innerHTML += "Right Click : Menu<br/>";
     message_help.innerHTML += "<br/>";
-    message_help.innerHTML += Globals.version + "<br/>";
     message_help.innerHTML += "Bugs/Sugestions:<br/>";
-    message_help.innerHTML += "github.com/pemn<br/>";
+    message_help.innerHTML += "github.com/pemn/hourglass<br/>";
+    message_help.innerHTML += Globals.version + "<br/>";
     
     document.body.appendChild( message_help );
     setTimeout(function(){document.body.removeChild(message_help)}, 5000);
