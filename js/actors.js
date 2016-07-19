@@ -28,7 +28,8 @@ var Globals = {
     no_sound: false,
     hide_close: false,
     always_on_top: false,
-    rate: 1.0
+    rate: 1.0,
+    version: "v1.0"
 };
 
 // cached alert sound
@@ -165,7 +166,7 @@ Hourglass.prototype.turn = function() {
     this.play = 1.0;
     this.clock = new THREE.Clock();
     this.clock.start();
-    if(typeof(nw) !== "undefined") nw.Window.get().setAlwaysOnTop(Globals.always_on_top);
+    if(Globals.chrome) chrome.app.window.current().setAlwaysOnTop(Globals.always_on_top);
 }
 
 Hourglass.prototype.sand_state = function() {
