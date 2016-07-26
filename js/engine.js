@@ -202,6 +202,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // GUI
     gui = new dat.GUI({ autoplace: false, width: "100%" });
     gui.close();
+    // convenience close option for when the close button is hidden
+    gui.add(window, 'close');
+    //gui.add({exit: function() {window.close()}}, 'exit');
     dat.GUI.toggleHide();
     // gui.addColor(Globals, 'color_glass').onChange(function(value) {Engine.hourglass.glass_material.color.set(value)});
     // gui.addColor(Globals, 'color_sand').onChange(function(value) {Engine.hourglass.sand_material.color.set(value)});
@@ -234,10 +237,6 @@ document.addEventListener('DOMContentLoaded', function() {
         gui.add(Globals, 'hide_close').onChange(function(value) {
             document.getElementById("close_buttom").style.visibility = value ? "hidden" : "visible";
         });
-
-        // convenience close option
-        gui.add({exit: function() {window.close()}}, 'exit');
-
     }
     // briefly show the help panel
     showHelp();
