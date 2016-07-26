@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // gui.addColor(Globals, 'color_glass').onChange(function(value) {Engine.hourglass.glass_material.color.set(value)});
     // gui.addColor(Globals, 'color_sand').onChange(function(value) {Engine.hourglass.sand_material.color.set(value)});
     gui.add(Globals, 'wait');
-    gui.add(Globals, 'rate', 0.0, 1.0).onChange(function(value) {Engine.hourglass.setRate(value)});
+    gui.add(Engine.hourglass, 'fill', 0.0, 1.0).listen().onChange(function(value) {Engine.hourglass.setFill(value)});
     // nwjs or chrome.app only section
     if(Globals.chrome) {
         // read settings stored on the presistent localStorage
@@ -234,6 +234,10 @@ document.addEventListener('DOMContentLoaded', function() {
         gui.add(Globals, 'hide_close').onChange(function(value) {
             document.getElementById("close_buttom").style.visibility = value ? "hidden" : "visible";
         });
+
+        // convenience close option
+        gui.add({exit: function() {window.close()}}, 'exit');
+
     }
     // briefly show the help panel
     showHelp();

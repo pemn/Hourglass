@@ -28,7 +28,6 @@ var Globals = {
     no_sound: false,
     hide_close: false,
     always_on_top: false,
-    rate: 1.0,
     version: "v1.0"
 };
 
@@ -255,12 +254,12 @@ Hourglass.prototype.clockUpdate = function() {
     }
 }
 
-Hourglass.prototype.setRate = function(rate) {
+Hourglass.prototype.setFill = function(fill) {
     if(!this.clock.running) {
         this.clock = new THREE.Clock();
         this.clock.start();
     }
-    this.clock.elapsedTime = Globals.wait * rate;
+    this.clock.elapsedTime = Globals.wait * (1.0 - fill);
 }
 
 Hourglass.prototype.intersect = function(camera, x, y) {
