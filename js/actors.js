@@ -41,7 +41,7 @@ Globals.chrome = chrome && chrome.app && chrome.app.window && true;
 Globals.loadItem = function(item) {
     if (window.localStorage === null) return;
     // convert "true" and "false" to true/false boolean
-    Globals[item] = eval(window.localStorage.getItem(item));
+    Globals[item] = eval(window.localStorage.getItem(item)) && true;
 }
 
 // save a global value to the persistent storate

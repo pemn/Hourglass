@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // nwjs or chrome.app only section
     if(Globals.chrome) {
         // read settings stored on the presistent localStorage
-        ["always_on_top","hide_close","no_sound"].map(Globals.loadItem);
+        ["always_on_top","hide_close","no_sound","abc"].map(Globals.loadItem);
 
         // Close buttom (since we are a frameless window)
         var div = document.createElement( 'div' );
