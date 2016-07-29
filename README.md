@@ -6,12 +6,12 @@ Resizable, moveable and with transparent background (if supported by your deskto
   
 This is a HTML5 desktop application, built on top of web technologies like Three.js, dat.gui.js and the chrome APIs.
 It requires OpenGL to work, so ensure its enabled if you test this app in virtual machines.  
-The HTML5 engine used is NW.js, which provides HTML5 Apps with first class citizen status on the desktop.  
+The HTML5 engine used is NW.js. It provides HTML5 Apps with first class citizen status on the desktop.  
 The engine and setup structure used for this App should offer a good alternative for packaging other HTML5 apps as a Desktop App.  
 
 Can also be run as a chrome App (no transparency), sideloaded using a launch script (chrome-lauch-app.bat).  
   
-Can be used a web page on modern browsers (no transparency, with browser frame and decorations). For web page mode, just copy the folder into a web server. Running index.html from local file system wont work. Also, the features requiring chrome APIs will only be available when supported.  
+Can be used a web page on modern browsers (no transparency, with browser frame and decorations). The features that require chrome APIs may be disabled on some browsers. For web page mode, just copy the folder into a web server. Running index.html from local file system wont work.  
 ##Screenshot
 ![screenshot](https://github.com/pemn/Hourglass/blob/master/assets/screenshot.png)
 ##Installer
