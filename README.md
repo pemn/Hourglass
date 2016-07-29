@@ -4,7 +4,7 @@ The main purpose of this app is to remind the user to rest its arms and eyes eve
 It will keep track of time even if minimized. When time is up it will play a sound (can be disabled) and will become always visible (but wont steal keyboard focus) until turned.  
 Resizable, moveable and with transparent background (if supported by your desktop).  
   
-This is a HTML5 desktop application, built on top of web technologies like Three.js and dat.gui.js. 
+This is a HTML5 desktop application, built on top of web technologies like Three.js and dat.gui.js.  
 It requires OpenGL to work, so ensure its enabled if you test this app in virtual machines.  
 The HTML5 engine used is NW.js, which provides HTML5 Apps with first class citizen status on the desktop.  
 The engine and setup structure used for this App should offer a good alternative for packaging other HTML5 apps as a Desktop App.  
