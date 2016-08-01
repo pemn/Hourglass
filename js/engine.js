@@ -198,8 +198,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // console.log("DOMContentLoaded");
     window.moveTo(window.screen.availWidth - window.outerWidth - 20, window.screen.availHeight * 0.1);
 
+    // start the WebGL renderer
     Engine.init();
-    // GUI
+    
+    // briefly show the help panel
+    showHelp();
+
+    // create the right button GUI
     gui = new dat.GUI({ autoplace: false, width: "100%" });
     gui.close();
     // convenience close option for when the close button is hidden
@@ -213,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // nwjs or chrome.app only section
     if(Globals.chrome) {
         // read settings stored on the presistent localStorage
-        ["always_on_top","hide_close","no_sound","abc"].map(Globals.loadItem);
+        ["always_on_top","hide_close","no_sound"].map(Globals.loadItem);
 
         // Close buttom (since we are a frameless window)
         var div = document.createElement( 'div' );
@@ -238,8 +243,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("close_buttom").style.visibility = value ? "hidden" : "visible";
         });
     }
-    // briefly show the help panel
-    showHelp();
 });
 
 window.addEventListener("beforeunload", function(){
