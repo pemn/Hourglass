@@ -17,6 +17,7 @@
 
 // hardcoded defauls
 // some values may be changed by the dat.gui
+// some are also restored from the localStorage
 var Globals = {
     wait: 3600,
     color_wood: 0xE37222,
@@ -31,11 +32,11 @@ var Globals = {
     version: "v1.0"
 };
 
-// cached alert sound
-Globals.audio_beep = new Audio(Globals.asset_beep);
-
 // flag indicating if chrome APIs are available
 Globals.chrome = chrome && chrome.app && chrome.app.window && true;
+
+// cached alert sound
+Globals.audio_beep = new Audio(Globals.asset_beep);
 
 // load a global value from the persistent storate
 Globals.loadItem = function(item) {
@@ -215,19 +216,15 @@ Hourglass.prototype.update = function() {
     if(!this.scene) return;
 
     if(this.play > 0) {
+        // the turn animation will have 100 frames
         this.play -= 0.01;
         this.particles.actor.visible = false;
-        this.glass.rotation.z += Math.PI * 0.01;
-        if(this.glass.rotation.z >= Math.PI * 2.0) {
-            this.glass.rotation.z -= Math.PI * 2.0;
-        }
-        this.sand.rotation.z += Math.PI * 0.01;
-        if(this.sand.rotation.z >= Math.PI * 2.0) {
-            this.sand.rotation.z -= Math.PI * 2.0;
-        }
-        // snap the rotation to zero to prevent subtle inconsistencies
+        this.glass.rotation.z = Math.PI * (this.play - 1.0);
+        this.sand.rotation.z = Math.PI * (this.play - 1.0);
+        // end of animation
         if(this.play <= 0) {
             this.particles.actor.visible = true;
+            // snap the rotation to zero to prevent subtle inconsistencies
             this.sand.rotation.z = 0;
             this.glass.rotation.z = 0;
         }
