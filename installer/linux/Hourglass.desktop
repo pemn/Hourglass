@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Hourglass
+Exec=linux-x64/nw --nwapp=.
+Path=/usr/share/hourglass/
+Icon=/usr/share/hourglass/assets/icon128.png
+Comment=WebGL 3D hourglass app to remind of work pauses every hour
