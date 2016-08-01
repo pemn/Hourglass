@@ -26,11 +26,8 @@ The Windows installer does not require administrator privileges and allows multi
   :octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x86-setup.exe
 
   - Linux 64 bits  
-  :octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-linux.zip
-    ```
-    Extract the Linux zip to /usr/share/hourglass/  
-    Copy hourglass.desktop to $HOME/Desktop
-    ```
+  :octocat: https://github.com/pemn/Hourglass/releases/download/latest/Hourglass-x64-linux.zip  
+    > Extract to `/usr/share/hourglass/`
 
 ##License
 Apache 2.0
