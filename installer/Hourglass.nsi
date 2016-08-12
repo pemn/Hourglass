@@ -16,6 +16,21 @@ UninstallIcon "..\assets\favicon.ico"
 OutFile "${APPNAME}-${APPARCH}-setup.exe"
 RequestExecutionLevel user
 ;--------------------------------
+
+; Check if the user downloaded the correct installer for his plataform
+!include x64.nsh
+Function .onInit
+  ${If} ${RunningX64}
+    StrCmp ${APPARCH} "x64" +3
+    messageBox MB_YESNO|MB_ICONEXCLAMATION "64 bit Windows detected.$\nThis installer is 32 bits, but a 64 bit version may be available.$\nContinue anyway?" IDYES +2
+    Quit
+  ${Else}
+    StrCmp ${APPARCH} "x86" +3
+    messageBox MB_ICONSTOP "32 bit Windows detected.$\nThis installer is 64 bits and will not work, but a 32 bits version may be available."
+    Quit
+  ${EndIf}
+FunctionEnd
+
 ; Pages
 Page directory
 Page components
