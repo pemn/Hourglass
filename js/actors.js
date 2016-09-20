@@ -10,7 +10,6 @@
   http://www.apache.org/licenses/LICENSE-2.0
   
   v1.0 06/2016 paulo.ernesto
-  carol
 */
 
 // Unicode has an HOURGLASS symbol at U+231B (⌛).
@@ -215,13 +214,13 @@ Hourglass.prototype.sand_state = function() {
 Hourglass.prototype.update = function() {
     if(!this.scene) return;
 
-    if(this.play > 0) {
+    if(this.play >= 0) {
         // the turn animation will have 100 frames
-        this.play -= 0.01;
         this.particles.actor.visible = false;
         this.glass.rotation.z = Math.PI * (this.play - 1.0);
         this.sand.rotation.z = Math.PI * (this.play - 1.0);
         // end of animation
+        this.play -= 0.01;
         if(this.play <= 0) {
             this.particles.actor.visible = true;
             // snap the rotation to zero to prevent subtle inconsistencies

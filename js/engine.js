@@ -10,7 +10,6 @@
   http://www.apache.org/licenses/LICENSE-2.0
   
   v1.0 06/2016 paulo.ernesto
-  carol
 */
 
 var Engine = {
@@ -95,8 +94,8 @@ function onDocumentMouseDown( event ) {
 function onRendererMouseDown( event ) {
     if(event.button != 0) return;
     event.preventDefault();
-
     if ( Engine.hourglass.intersect(Engine.camera, event.clientX / window.innerWidth, event.clientY / window.innerHeight)) {
+        // on click over the hourglass object, turn
         Engine.hourglass.turn();
     } else {
         // if the user clicked a empty region, move the window
@@ -106,6 +105,12 @@ function onRendererMouseDown( event ) {
         window.addEventListener('mousemove', onDocumentMouseMove);
         window.addEventListener('mouseup', onDocumentMouseUp);
     }
+}
+
+function onRendererDblClick( event ) {
+    // on double click, stop any animation and minimize
+    Engine.hourglass.play = 0;
+    if(Globals.chrome) chrome.app.window.current().minimize();
 }
 
 Engine.init = function() {
@@ -165,6 +170,7 @@ Engine.init = function() {
     // mouse move and clicks
     this.renderer.domElement.addEventListener('mousemove', onRendererMouseMove, false);
     this.renderer.domElement.addEventListener('mousedown', onRendererMouseDown, false);
+    this.renderer.domElement.addEventListener('dblclick', onRendererDblClick, false);
     document.addEventListener('mousedown', onDocumentMouseDown, false);
     // capture all keystrokes
     document.addEventListener('keydown', onDocumentKey, false);
