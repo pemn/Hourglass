@@ -13,7 +13,7 @@ Can also be run as a chrome App (no transparency), sideloaded using a launch scr
   
 Can be used a web page on modern browsers (no transparency, with browser frame and decorations). The features that require chrome APIs may be disabled on some browsers. For web page mode, just copy the folder into a web server. Running index.html from local file system wont work.  
 ## Screenshot
-![screenshot](https://github.com/pemn/Hourglass/blob/master/assets/screenshot.png)
+![screenshot](./assets/screenshot.png?raw=true)
 ## Installer
 The project includes the NSIS config file used to build the Windows installer/uninstaller.  
 The Windows installer does not require administrator privileges and allows multiple Apps to share the same HTML5 Engine.
